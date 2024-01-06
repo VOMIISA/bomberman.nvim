@@ -1,12 +1,20 @@
 local M = {}
 
 function M.load()
-    vim.lsp.util.open_floating_preview({
-        title = "Hello World!",
-        body = "This is an example floating window"
-    }, "center", { border = "single", width = 100, height = 100 })
+    -- setlocal nocursorline
 
-    print("Loaded")
+    Buf = vim.api.nvim_create_buf(false, true)
+    Win = vim.api.nvim_open_win(Buf, true, {
+        border = "single",
+        title = "Bomberman",
+        relative = "editor",
+        width = 200,
+        height = 50,
+        row = 10,
+        col = 10,
+    })
+
+    print(Win)
 end
 
 -- For debugging purposes
