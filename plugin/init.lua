@@ -1,1 +1,1 @@
-print("Hello world")
+require("bomberman.fns")
