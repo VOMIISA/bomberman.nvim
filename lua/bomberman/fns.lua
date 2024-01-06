@@ -15,6 +15,8 @@ function M.load()
     })
 
     print(Win)
+
+    vim.api.nvim_win_close(Win, true)
 end
 
 -- For debugging purposes
